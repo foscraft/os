@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/HTTP-Cookies-secure/index.html",
+      "/posts/setup-project/index.html",
       "/posts/api-terms/index.html",
       "/posts/rest-api/index.html"
     ]
