@@ -2,7 +2,7 @@
 title: " Linux Filesystem hierarchy"
 author: "foscraft"
 date: "2022-12-01"
-categories: [APIs,tech,programming,engineering]
+categories: [Linux]
 ---
 
 Common Linux Filesystem hierarchy
