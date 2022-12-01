@@ -5,7 +5,7 @@ date: "2022-12-01"
 categories: [APIs,tech,programming,engineering]
 ---
 
-### REST API glossary
+REST API glossary
 
 ![](apis.jpeg)
 

@@ -5,11 +5,10 @@ date: "2022-12-01"
 categories: [code, analysis,APIs]
 ---
 
-![](http.jpeg)
-
 Cookies are small packets of data sent by the server and stored in the browser.
-
 The data they contain can be sensitive and personal, such as access tokens and session IDs, an obvious target for attackers. For this reason, securing them is vital.
+
+![](http.jpeg)
 
 Securely configuring cookies to keep their data safer should always be a priority if you decide your site requires them.
 

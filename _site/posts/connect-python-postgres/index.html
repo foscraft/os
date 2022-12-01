@@ -140,16 +140,15 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="connect-python-with-postgres-database" class="level3">
-<h3 class="anchored" data-anchor-id="connect-python-with-postgres-database">CONNECT PYTHON WITH POSTGRES DATABASE</h3>
+<p>Connect to postgres database using python</p>
 <p><img src="best.jpg" class="img-fluid"></p>
 <p>First run this in terminal:</p>
 <pre><code>    pip install psycopg2</code></pre>
-<p><strong>Create a new database</strong></p>
+<p><code>Create a new database</code></p>
 <p>Log in to the PostgreSQL database server and create a database.</p>
 <p>Create database <em>mlteam</em></p>
 <pre><code>    CREATE DATABASE mlteam;</code></pre>
-<p><strong>Connect to the database using the psycopg2</strong></p>
+<p><code>Connect to the database using the psycopg2</code></p>
 <p>To connect to mlteam database, use the <em>connect()</em> function of the <em>psycopg2</em>.</p>
 <p>The <em>connect()</em> function creates a new database session and returns a new instance of the connection class. By using the connection object, you can create a new <em>cursor</em> to execute any SQL statements.</p>
 <p>To call the <em>connect()</em> function, you specify the PostgreSQL database parameters as a connection string and pass it like this to the connect function:</p>
@@ -180,7 +179,7 @@ ul.task-list{list-style: none;}
 <p>If you’re pushing code with git, include <em>mlteam.ini</em> to the <em>.gitignore</em> file to not committing the sensitive information to the public repo like github.</p>
 <p>The .gitignore file will be like this:</p>
 <pre><code>    mlteam.ini</code></pre>
-<p><strong>Create the config.py file.</strong></p>
+<p><code>Create the config.py file.</code></p>
 <p>The following <em>config()</em> function read the <em>mlteam.ini</em> file and returns connection parameters. The <em>config()</em> function is placed in the <em>config.py</em> file:</p>
 <p>It looks this way:</p>
 <pre><code>    #!/usr/bin/python
@@ -204,7 +203,7 @@ ul.task-list{list-style: none;}
             raise Exception('Section {0} not found in the {1} file'.format(section, filename))
 
         return db</code></pre>
-<p><strong>Create connect.py file</strong></p>
+<p><code>Create connect.py file</code></p>
 <p>The following <em>connect()</em> function connects to <em>mlteam</em> , prints out database version.</p>
 <p>connect.py file:</p>
 <pre><code>    #!/usr/bin/python
@@ -220,7 +219,7 @@ ul.task-list{list-style: none;}
 
             # connect to the PostgreSQL server
             print('Connecting to the PostgreSQL database...')
-            conn = psycopg2.connect(**params)
+            conn = psycopg2.connect(`params)
             
             # create a cursor
             cur = conn.cursor()
@@ -245,7 +244,7 @@ ul.task-list{list-style: none;}
 
     if __name__ == '__main__':
         connect()</code></pre>
-<p><strong>The process in code.</strong></p>
+<p><code>The process in code.</code></p>
 <p>First, it reads database connection parameters from the <em>mlteam.ini</em> file then creates a new database connection by calling the <em>connect()</em> function, it then creates a new cursor and execute an SQL statement to get database version. After that, read the result set by calling the <em>fetchone()</em> method of the <em>cursor</em> object. Finally, close the communication with the database server by calling the <em>close()</em> method of the cursor and connection object.</p>
 <p>Execute code by running the connect.py file.</p>
 <p>You should see such result in terminal:</p>
@@ -255,7 +254,6 @@ ul.task-list{list-style: none;}
     Database connection closed.</code></pre>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

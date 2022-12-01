@@ -5,8 +5,7 @@ date: "2022-12-01"
 categories: [APIs,git,github,programming,engineering]
 ---
 
-
-### This article guides us on Naming convention of branches and pull request etiquette
+This article guides us on Naming convention of branches and pull request etiquette
 
 ![](best.png)
 
@@ -20,7 +19,7 @@ categories: [APIs,git,github,programming,engineering]
   - [Message Example](#message-example)
 
 
-## Branch Naming
+### Branch Naming
 
 Branches created should be named using the following format:
 
@@ -37,24 +36,27 @@ Branches created should be named using the following format:
 
 `story-summary` - Short 2-3 words summary about what the branch contains
 
-**Example**
+`Example`
 
 `ft-user-registration-TB1-I764`
 
 
-## Commit Message
+### Commit Message
 
-A commit message consists of a **header**, a **body** and a **footer**, separated by a blank line.
+A commit message consists of a `header`, a `body` and a `footer`, separated by a blank line.
 
 Any line of the commit message cannot be longer than 100 characters! This allows the message to be easier to read on gitlab as well as in various git tools.
 
-```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
-```
+
+`<type>(<scope>): <subject>`
+
+`<BLANK LINE>`
+
+`<body>`
+
+`<BLANK LINE>`
+
+`<footer>`
 
 These rules are adopted from the [AngularJS commit convention.](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
 
@@ -103,24 +105,25 @@ feat(docker): implement exactly once delivery
 - ensure every event published to docker is delivered exactly once
 - implement error handling for failed delivery
 
-#status in_progress
+`#status in_progress`
 
-Asana cards
+`Asana cards`
 
 
-## Pull Request Naming
+### Pull Request Naming
 
-#### Pull Request Title
+*Pull Request Title*
 
 The Pull Request title should be named using the following format:
 
 `#[STORY_ID] [Story description]`
 
-**Example**
+`Example`
 
 `#TB1-I764 CREATE PULL REQUEST TEMPLATE`
 
-#### Pull Request Description Template
+
+*Pull Request Description Template*
 
 The description of the Pull Request should contain the following headings and corresponding content in Markdown format.
 
@@ -136,7 +139,7 @@ The description of the Pull Request should contain the following headings and co
 
 
 
-#### Pull Request Etiquette
+*Pull Request Etiquette*
 
 It is our belief that Pull Request reviews should not negatively impact a team’s ability to deliver features. Pull Requests that take too much time to get reviewed can hinder on a team’s progress. As such, we practice the following behaviours when raising Pull Requests:
 
