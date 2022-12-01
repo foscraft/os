@@ -1,0 +1,130 @@
+---
+title: "API related terms"
+author: "foscraft"
+date: "2022-12-01"
+categories: [APIs,tech,programming,engineering]
+---
+
+![](apis.jpeg)
+
+25 API-related terms every web developer should be aware of:
+
+`Endpoint`
+
+An endpoint is nothing but the location(URL) where the actual resource is present.
+
+`Origin Server`
+
+The origin server is the actual server that contains the data and servers on the client's request.
+
+There may or may not be other intermediate servers included in the path.
+
+`Proxy Server`
+
+Servers have the ability to further pass your request to the other server.
+
+These types of intermediate servers are known as proxy servers.
+
+`DNS Server`
+
+DNS stands for Domain Name System.
+
+As computer devices are interacted using IP addresses, the DNS server provides the IP address of the requested URL.
+
+`API key`
+
+An API key is a unique code for every user which lets you call an API.
+
+The length of an API key could be anything.
+
+The only rule is that these keys must be unique and not easy to guess.
+
+Generally, API keys contain lower case and upper case letters with numbers.
+
+`API Token`
+
+The API token is a unique identifier of an application requesting access to your API.
+
+An API token is a form of authentication similar to a username/password.
+
+`Access token`
+
+An access token is used for authentication.
+
+Applications use an access token to authenticate themselves so that they can make an API call.
+
+`SDK`
+
+SDK stands for Software Development Kit.
+
+It is a set of development tools that allows the creation of software or an application for a particular platform.
+
+SDK provides you with the whole package from compilers to debuggers to even a software development framework.
+
+`RPC`
+
+Remote Procedure Call (RPC) is the oldest client-server communication method in use today. Instead of the traditional HTTP call, RPC uses a function call.
+
+It means that on the client-side, you invoke a function that is written on the server-side code.
+
+`CORS`
+
+CORS is an HTTP-based mechanism that lets you request data from one URL to a different URL.
+
+Check out this note for more details: 👇🏻 Screenshot from 2022-09-16 15-18-30
+
+`Async API`
+
+AsyncAPI is an open-source project aimed at improving the current state of Event-Driven Architecture.
+
+These APIs allow relatively time-consuming requests to be processed in the background while other requests are made.
+
+`Internal API`
+
+Internal API, also known as Private API is only accessible to the developers within an organization.
+
+`API Caching`
+
+API Caching is the ability to store copies of frequently accessed data in several places along the request-response path.
+
+`External API`
+
+External API, also known as Public API is accessible to all the developers outside the enterprise or organization.
+
+`HTTP cookies`
+
+An HTTP cookie is a small piece of data created by the web server inside your browser.
+
+The data inside a cookie has an ID that is unique to you and your computer. This ID helps the server know who the user is to send the data accordingly.
+
+`Authorization`
+
+Authorization always comes after authentication. It is the process of permitting users to access different resources from the server, and it’s not visible and changeable by the user.
+
+`Microservices`
+
+A microservice is an application design that breaks up a monolithic architecture into small, self-containing services.
+
+`OpenAPI spec`
+
+It is a format to define structure and syntax for REST APIs. It provides a standard that allows both humans and computers to discover and understand the service's capabilities without access to source code, documentation, or traffic inspection.
+
+`Composite API`
+
+Composite API is a design approach in which we bundle multiple API requests into a single API call.
+
+`API Versioning`
+
+API versioning is the practice of managing changes in your API.
+
+You should version your API if you are introducing any breaking changes. Clients can still access the old version, and their products will not break as soon as you launch a new release.
+
+`Authentication`
+
+Authentication and authorization are the two most confusing terms.
+
+Authentication is validating the user to identify if they are who they claim to be.
+
+`API Lifecycle`
+
+API lifecycle is the entire lifespan of any particular API from its planning phase to when it gets stale.

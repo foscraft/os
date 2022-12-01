@@ -1,0 +1,54 @@
+---
+title: "How to keep your HTTP Cookies secure."
+author: "foscraft"
+date: "2022-12-01"
+categories: [news, code, analysis,APIs]
+---
+
+![](http.jpeg)
+
+Cookies are small packets of data sent by the server and stored in the browser.
+
+The data they contain can be sensitive and personal, such as access tokens and session IDs, an obvious target for attackers. For this reason, securing them is vital.
+
+Securely configuring cookies to keep their data safer should always be a priority if you decide your site requires them.
+
+Below are the attributes you should know to ensure cookie security👇🏼
+
+`Session vs. Persistent cookies`
+
+Cookies can be valid for a certain time using the ‘max-age’ or ‘expires’ attribute.
+
+Using these makes a Cookie persistent, meaning it will persist even if the browser restarts as long as the expiry date is set sometime in the future.
+
+The opposite of a persistent cookie is a session cookie when the ‘max-age’ or ‘expires’ attributes are omitted.
+
+Session cookies will expire automatically when the browser closes (the session ends).
+
+`The ‘Secure’ Flag`
+
+The secure flag prevents a cookie from being sent over an unencrypted connection.
+
+You should always use this when configuring cookies carrying sensitive data, as it will always be sent over HTTPS, which removes the risk of interception attacks.
+
+`The ‘HTTPOnly’ Flag`
+
+By default, all cookies can be accessed and read by JavaScript.
+
+The HTTPOnly flag tells the browser not to share the cookie with JavaScript by removing it from the ‘window.cookie’ variable, allowing it to stay hidden between the browser and server.
+
+`The ‘SameSite’ Flag`
+
+This flag eliminates the risk of CSRF(Cross-Site-Request-Forgery). It prevents the cookie from being used in requests generated from different origins.
+
+‘SameSite’ causes the browser to check if the request origin matches the origin that set the cookie.
+
+`Summary`
+
+Never store sensitive data in cookies unless it's a necessity.
+
+Always use the SameSite, HTTPOnly, and Secure flags.
+
+Aim to use session cookies for sensitive data. If you use persistent cookies, keep their lifetime short and expire them soon.
+
+I hope you liked this thread!

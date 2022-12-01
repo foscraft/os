@@ -1,0 +1,41 @@
+---
+title: "About me"
+image: ada.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/foscraft
+    - icon: github
+      text: Github
+      href: https://github.com/foscraft
+
+---
+My name is Reuben Nyaribari `foscraft`. 
+I am a programmer and backend engineer from Nairobi, Kenya. I have a bachelors in mathematics, statistics major.
+Currently working as a backend engineer and consulting as a data engineer.
+I have worked on various projects in natural language processing (NLP), building web applications and more.
+
+This is my personal blog or better my personal knowledge base where I am writing down my thoughts all around APIs, security, Linux, Python, data processing, natural language processing and more.
+
+Languages I use are:
+
+`Python` 
+`Javascript`
+
+The tools I use:
+
+`Django`
+`Flask`
+`Reactjs`
+`Pyspark`
+`Git`
+`SQL`
+`Figma`
+`Azure`
+`Docker`
+`Heroku`
+`CircleCI`
+
+Reach out to me on my socials below.
