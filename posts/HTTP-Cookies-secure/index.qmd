@@ -2,7 +2,7 @@
 title: "How to keep your HTTP Cookies secure."
 author: "foscraft"
 date: "2022-12-01"
-categories: [news, code, analysis,APIs]
+categories: [code, analysis,APIs]
 ---
 
 ![](http.jpeg)
