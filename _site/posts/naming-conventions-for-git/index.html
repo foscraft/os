@@ -9,7 +9,7 @@
 <meta name="author" content="foscraft">
 <meta name="dcterms.date" content="2022-12-01">
 
-<title>foscraft - REST APIs</title>
+<title>foscraft - Naming conventions and pull request naming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,10 +100,11 @@ ul.task-list{list-style: none;}
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">REST APIs</h1>
+      <h1 class="title">Naming conventions and pull request naming</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">APIs</div>
-                <div class="quarto-category">tech</div>
+                <div class="quarto-category">git</div>
+                <div class="quarto-category">github</div>
                 <div class="quarto-category">programming</div>
                 <div class="quarto-category">engineering</div>
               </div>
@@ -140,35 +141,117 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="rest-api-glossary" class="level3">
-<h3 class="anchored" data-anchor-id="rest-api-glossary">REST API glossary</h3>
-<p><img src="apis.jpeg" class="img-fluid"></p>
-<p><code>REST API</code></p>
-<p>It Is a web service based on REST architecture that allows communication between different systems.</p>
-<p>It uses HTTP requests to GET, PUT, POST, and DELETE data. REST API is often used in web applications to access data from a server.</p>
-<p><code>API Client</code></p>
-<p>An API Client is a software program that makes it easy to work with Application Programming Interfaces (APIs).</p>
-<p>It can be used to access data or perform actions on behalf of a user.</p>
-<p>API Clients are often used by developers to test APIs.</p>
-<p><code>API Resource</code></p>
-<p>An API resource is a specific type of data that can be accessed by an application programming interface (API). API Server</p>
-<p>An API server allows two different systems to communicate with each other.</p>
-<p>In most cases, an API server enables a web application to interact with a database.</p>
-<p><code>API Scalability</code></p>
-<p>API scalability refers to the ability of an API to handle increased loads of data or traffic without adversely affecting performance.</p>
-<p>A scalable API can handle large amounts of data and traffic without compromising speed or functionality.</p>
-<p><code>Stateless API</code></p>
-<p>A stateless API is an API that does not maintain a state between requests.</p>
-<p>Each request is independent of any other request, and state information is not stored on the server.</p>
-<p><code>API Cache</code></p>
-<p>An API is cacheable if the data it returns can be stored in a cache.</p>
-<p>Cache allows the same data to be returned for multiple requests without having to fetch it from the original source each time.</p>
-<p>Caching can improve performance.</p>
-<p><code>Layered System</code></p>
-<p>A layered system, means that each layer is responsible for a specific set of tasks.</p>
-<p>The most common layers are the presentation layer, the business logic layer, and the data access layer.</p>
+<section id="this-article-guides-us-on-naming-convention-of-branches-and-pull-request-etiquette" class="level3">
+<h3 class="anchored" data-anchor-id="this-article-guides-us-on-naming-convention-of-branches-and-pull-request-etiquette">This article guides us on Naming convention of branches and pull request etiquette</h3>
+<p><img src="best.png" class="img-fluid"></p>
+<ul>
+<li><p><a href="#branch-naming">Branch Naming</a></p></li>
+<li><p><a href="#commit-message">Commit Message</a></p>
+<ul>
+<li><a href="#message-header">Message Header</a></li>
+<li><a href="#message-body">Message Body</a></li>
+<li><a href="#message-footer">Message Footer</a></li>
+<li><a href="#message-example">Message Example</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="branch-naming" class="level2">
+<h2 class="anchored" data-anchor-id="branch-naming">Branch Naming</h2>
+<p>Branches created should be named using the following format:</p>
+<p><code>{story type}-{2-3 word summary}-{Asana work item id}</code></p>
+<p><code>story-type</code> - Indicates the context of the branch and can be one of:</p>
+<pre><code>    ft == Feature
+    bg == Bug
+    ch == Chore
+    rf == Refactor</code></pre>
+<p><code>story-summary</code> - Short 2-3 words summary about what the branch contains</p>
+<p><strong>Example</strong></p>
+<p><code>ft-user-registration-TB1-I764</code></p>
+</section>
+<section id="commit-message" class="level2">
+<h2 class="anchored" data-anchor-id="commit-message">Commit Message</h2>
+<p>A commit message consists of a <strong>header</strong>, a <strong>body</strong> and a <strong>footer</strong>, separated by a blank line.</p>
+<p>Any line of the commit message cannot be longer than 100 characters! This allows the message to be easier to read on gitlab as well as in various git tools.</p>
+<pre><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+&lt;BLANK LINE&gt;
+&lt;body&gt;
+&lt;BLANK LINE&gt;
+&lt;footer&gt;</code></pre>
+<p>These rules are adopted from the <a href="https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit">AngularJS commit convention.</a></p>
+<section id="message-header" class="level4">
+<h4 class="anchored" data-anchor-id="message-header">Message Header</h4>
+<p>The message header is a single line that contains succinct description of the change containing a type, an optional scope and a subject.</p>
+<p><code>##### &lt;type&gt;</code> This describes the kind of change that this commit is providing.</p>
+<pre><code>feat (feature)
+fix (bug fix)
+docs (documentation)
+style (formatting, missing semi colons, …)
+refactor
+test (when adding missing tests)
+chore (maintain)</code></pre>
+<p><code>#####&lt;scope&gt;</code> Scope can be anything specifying place of the commit change. For example events, model_load, shiny_data_processing, authorization, authentication, loginPage, etc…</p>
+<p><code>#####&lt;subject&gt;</code> This is a very short description of the change.</p>
+<pre><code>use imperative, present tense: “change” not “changed” nor “changes”
+don’t capitalize first letter
+no dot (.) at the end</code></pre>
+</section>
+<section id="message-body" class="level4">
+<h4 class="anchored" data-anchor-id="message-body">Message Body</h4>
+<pre><code>just as in subject use imperative, present tense: “change” not “changed” nor “changes”
+includes motivation for the change and contrasts with previous behavior</code></pre>
+<p><a href="http://365git.tumblr.com/post/3308646748/writing-git-commit-messages">http://365git.tumblr.com/post/3308646748/writing-git-commit-messages</a></p>
+<p><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html Message Footer</a></p>
+</section>
+<section id="message-footer" class="level4">
+<h4 class="anchored" data-anchor-id="message-footer">Message Footer</h4>
+<p>Status changes should be listed on a separate line in the footer prefixed with #status <status-name> like this:</status-name></p>
+<p>[#TB1-I17 #status (in_progress | under_review)]</p>
+</section>
+<section id="message-example" class="level4">
+<h4 class="anchored" data-anchor-id="message-example">Message Example</h4>
+<p>feat(docker): implement exactly once delivery</p>
+<ul>
+<li>ensure every event published to docker is delivered exactly once</li>
+<li>implement error handling for failed delivery</li>
+</ul>
+<p>#status in_progress</p>
+<p>Asana cards</p>
+</section>
+</section>
+<section id="pull-request-naming" class="level2">
+<h2 class="anchored" data-anchor-id="pull-request-naming">Pull Request Naming</h2>
+<section id="pull-request-title" class="level4">
+<h4 class="anchored" data-anchor-id="pull-request-title">Pull Request Title</h4>
+<p>The Pull Request title should be named using the following format:</p>
+<p><code>#[STORY_ID] [Story description]</code></p>
+<p><strong>Example</strong></p>
+<p><code>#TB1-I764 CREATE PULL REQUEST TEMPLATE</code></p>
+</section>
+<section id="pull-request-description-template" class="level4">
+<h4 class="anchored" data-anchor-id="pull-request-description-template">Pull Request Description Template</h4>
+<p>The description of the Pull Request should contain the following headings and corresponding content in Markdown format.</p>
+<pre><code>#### What does this Pull Request do?
+#### Description of Task to be completed?
+#### How should this be manually tested?
+#### Any background context you want to provide?
+#### What are the relevant open projects stories e.g Asana?
+#### Screenshots (if appropriate)
+#### Questions:</code></pre>
+</section>
+<section id="pull-request-etiquette" class="level4">
+<h4 class="anchored" data-anchor-id="pull-request-etiquette">Pull Request Etiquette</h4>
+<p>It is our belief that Pull Request reviews should not negatively impact a team’s ability to deliver features. Pull Requests that take too much time to get reviewed can hinder on a team’s progress. As such, we practice the following behaviours when raising Pull Requests:</p>
+<pre><code>When I raise a Pull Request, I specifically assign a developer or engineering team as reviewer
+When I raise a Pull Request, I notify the reviewer(s) on telegram in a public channel
+The reviewer(s) can re-assign the Pull Request to someone else (e.g. to a Senior Engineer)
+The reviewer(s) has a 3 hours SLA to review the Pull Request
+If SLA is not met, I can Pull the unreviewed Pull Request if and only if:
+    All the Pull Request checks are passing (CircleCI, CodeClimate, Test Coverage)
+    I communicate in #technology telegram channel that I am merging an unreviewed Pull Request
+    I immediately take ownership of fixing any issues that arise from merging the Pull Request</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

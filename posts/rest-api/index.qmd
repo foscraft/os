@@ -5,7 +5,7 @@ date: "2022-12-01"
 categories: [APIs,tech,programming,engineering]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+### REST API glossary
 
 ![](apis.jpeg)
 

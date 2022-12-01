@@ -1,0 +1,150 @@
+---
+title: "Naming conventions and pull request naming"
+author: "foscraft"
+date: "2022-12-01"
+categories: [APIs,git,github,programming,engineering]
+---
+
+
+### This article guides us on Naming convention of branches and pull request etiquette
+
+![](best.png)
+
+- [Branch Naming](#branch-naming)
+
+- [Commit Message](#commit-message)
+
+  - [Message Header](#message-header)
+  - [Message Body](#message-body)
+  - [Message Footer](#message-footer)
+  - [Message Example](#message-example)
+
+
+## Branch Naming
+
+Branches created should be named using the following format:
+
+`{story type}-{2-3 word summary}-{Asana work item id}`
+
+`story-type` - Indicates the context of the branch and can be one of:
+
+```
+    ft == Feature
+    bg == Bug
+    ch == Chore
+    rf == Refactor
+```
+
+`story-summary` - Short 2-3 words summary about what the branch contains
+
+**Example**
+
+`ft-user-registration-TB1-I764`
+
+
+## Commit Message
+
+A commit message consists of a **header**, a **body** and a **footer**, separated by a blank line.
+
+Any line of the commit message cannot be longer than 100 characters! This allows the message to be easier to read on gitlab as well as in various git tools.
+
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+These rules are adopted from the [AngularJS commit convention.](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
+
+#### Message Header
+
+The message header is a single line that contains succinct description of the change containing a type, an optional scope and a subject.
+
+`##### <type>` This describes the kind of change that this commit is providing.
+
+    feat (feature)
+    fix (bug fix)
+    docs (documentation)
+    style (formatting, missing semi colons, …)
+    refactor
+    test (when adding missing tests)
+    chore (maintain)
+
+`#####<scope>` Scope can be anything specifying place of the commit change. For example events, model_load, shiny_data_processing, authorization, authentication, loginPage, etc...
+
+`#####<subject>` This is a very short description of the change.
+
+    use imperative, present tense: “change” not “changed” nor “changes”
+    don’t capitalize first letter
+    no dot (.) at the end
+
+#### Message Body
+
+    just as in subject use imperative, present tense: “change” not “changed” nor “changes”
+    includes motivation for the change and contrasts with previous behavior
+
+[http://365git.tumblr.com/post/3308646748/writing-git-commit-messages](http://365git.tumblr.com/post/3308646748/writing-git-commit-messages)
+
+[http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+Message Footer](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+
+#### Message Footer
+
+Status changes should be listed on a separate line in the footer prefixed with #status <status-name> like this:
+
+[#TB1-I17 #status (in_progress | under_review)]
+
+#### Message Example
+
+feat(docker): implement exactly once delivery
+
+- ensure every event published to docker is delivered exactly once
+- implement error handling for failed delivery
+
+#status in_progress
+
+Asana cards
+
+
+## Pull Request Naming
+
+#### Pull Request Title
+
+The Pull Request title should be named using the following format:
+
+`#[STORY_ID] [Story description]`
+
+**Example**
+
+`#TB1-I764 CREATE PULL REQUEST TEMPLATE`
+
+#### Pull Request Description Template
+
+The description of the Pull Request should contain the following headings and corresponding content in Markdown format.
+
+```
+#### What does this Pull Request do?
+#### Description of Task to be completed?
+#### How should this be manually tested?
+#### Any background context you want to provide?
+#### What are the relevant open projects stories e.g Asana?
+#### Screenshots (if appropriate)
+#### Questions:
+```
+
+
+
+#### Pull Request Etiquette
+
+It is our belief that Pull Request reviews should not negatively impact a team’s ability to deliver features. Pull Requests that take too much time to get reviewed can hinder on a team’s progress. As such, we practice the following behaviours when raising Pull Requests:
+
+    When I raise a Pull Request, I specifically assign a developer or engineering team as reviewer
+    When I raise a Pull Request, I notify the reviewer(s) on telegram in a public channel
+    The reviewer(s) can re-assign the Pull Request to someone else (e.g. to a Senior Engineer)
+    The reviewer(s) has a 3 hours SLA to review the Pull Request
+    If SLA is not met, I can Pull the unreviewed Pull Request if and only if:
+        All the Pull Request checks are passing (CircleCI, CodeClimate, Test Coverage)
+        I communicate in #technology telegram channel that I am merging an unreviewed Pull Request
+        I immediately take ownership of fixing any issues that arise from merging the Pull Request

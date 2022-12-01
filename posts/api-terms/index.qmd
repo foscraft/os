@@ -5,9 +5,9 @@ date: "2022-12-01"
 categories: [APIs,tech,programming,engineering]
 ---
 
-![](apis.jpeg)
+25 API-related terms every web developer should be aware of.
 
-25 API-related terms every web developer should be aware of:
+![](apis.jpeg)
 
 `Endpoint`
 
