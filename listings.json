@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/best-api-design-practices/index.html",
+      "/posts/HTTP-Cookies-secure/index.html",
+      "/posts/linux-file-system/index.html",
+      "/posts/connect-python-postgres/index.html",
+      "/posts/setup-project/index.html",
+      "/posts/api-terms/index.html",
+      "/posts/naming-conventions-for-git/index.html",
+      "/posts/http-respones-with-responses/index.html",
+      "/posts/rest-api/index.html"
+    ]
+  }
+]

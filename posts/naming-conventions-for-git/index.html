@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="foscraft">
+<meta name="dcterms.date" content="2022-12-01">
+
+<title>foscraft - Naming conventions and pull request naming</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">foscraft</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">articles</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About me</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/foscraft"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/foscraft"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Naming conventions and pull request naming</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">APIs</div>
+                <div class="quarto-category">git</div>
+                <div class="quarto-category">github</div>
+                <div class="quarto-category">programming</div>
+                <div class="quarto-category">engineering</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>foscraft </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 1, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>This article guides us on Naming convention of branches and pull request etiquette</p>
+<p><img src="best.png" class="img-fluid"></p>
+<ul>
+<li><p><a href="#branch-naming">Branch Naming</a></p></li>
+<li><p><a href="#commit-message">Commit Message</a></p>
+<ul>
+<li><a href="#message-header">Message Header</a></li>
+<li><a href="#message-body">Message Body</a></li>
+<li><a href="#message-footer">Message Footer</a></li>
+<li><a href="#message-example">Message Example</a></li>
+</ul></li>
+</ul>
+<section id="branch-naming" class="level3">
+<h3 class="anchored" data-anchor-id="branch-naming">Branch Naming</h3>
+<p>Branches created should be named using the following format:</p>
+<p><code>{story type}-{2-3 word summary}-{Asana work item id}</code></p>
+<p><code>story-type</code> - Indicates the context of the branch and can be one of:</p>
+<pre><code>    ft == Feature
+    bg == Bug
+    ch == Chore
+    rf == Refactor</code></pre>
+<p><code>story-summary</code> - Short 2-3 words summary about what the branch contains</p>
+<p><code>Example</code></p>
+<p><code>ft-user-registration-TB1-I764</code></p>
+</section>
+<section id="commit-message" class="level3">
+<h3 class="anchored" data-anchor-id="commit-message">Commit Message</h3>
+<p>A commit message consists of a <code>header</code>, a <code>body</code> and a <code>footer</code>, separated by a blank line.</p>
+<p>Any line of the commit message cannot be longer than 100 characters! This allows the message to be easier to read on gitlab as well as in various git tools.</p>
+<p><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;</code></p>
+<p><code>&lt;BLANK LINE&gt;</code></p>
+<p><code>&lt;body&gt;</code></p>
+<p><code>&lt;BLANK LINE&gt;</code></p>
+<p><code>&lt;footer&gt;</code></p>
+<p>These rules are adopted from the <a href="https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit">AngularJS commit convention.</a></p>
+<section id="message-header" class="level4">
+<h4 class="anchored" data-anchor-id="message-header">Message Header</h4>
+<p>The message header is a single line that contains succinct description of the change containing a type, an optional scope and a subject.</p>
+<p><code>##### &lt;type&gt;</code> This describes the kind of change that this commit is providing.</p>
+<pre><code>feat (feature)
+fix (bug fix)
+docs (documentation)
+style (formatting, missing semi colons, …)
+refactor
+test (when adding missing tests)
+chore (maintain)</code></pre>
+<p><code>#####&lt;scope&gt;</code> Scope can be anything specifying place of the commit change. For example events, model_load, shiny_data_processing, authorization, authentication, loginPage, etc…</p>
+<p><code>#####&lt;subject&gt;</code> This is a very short description of the change.</p>
+<pre><code>use imperative, present tense: “change” not “changed” nor “changes”
+don’t capitalize first letter
+no dot (.) at the end</code></pre>
+</section>
+<section id="message-body" class="level4">
+<h4 class="anchored" data-anchor-id="message-body">Message Body</h4>
+<pre><code>just as in subject use imperative, present tense: “change” not “changed” nor “changes”
+includes motivation for the change and contrasts with previous behavior</code></pre>
+<p><a href="http://365git.tumblr.com/post/3308646748/writing-git-commit-messages">http://365git.tumblr.com/post/3308646748/writing-git-commit-messages</a></p>
+<p><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html Message Footer</a></p>
+</section>
+<section id="message-footer" class="level4">
+<h4 class="anchored" data-anchor-id="message-footer">Message Footer</h4>
+<p>Status changes should be listed on a separate line in the footer prefixed with #status <status-name> like this:</status-name></p>
+<p>[#TB1-I17 #status (in_progress | under_review)]</p>
+</section>
+<section id="message-example" class="level4">
+<h4 class="anchored" data-anchor-id="message-example">Message Example</h4>
+<p>feat(docker): implement exactly once delivery</p>
+<ul>
+<li>ensure every event published to docker is delivered exactly once</li>
+<li>implement error handling for failed delivery</li>
+</ul>
+<p><code>#status in_progress</code></p>
+<p><code>Asana cards</code></p>
+</section>
+</section>
+<section id="pull-request-naming" class="level3">
+<h3 class="anchored" data-anchor-id="pull-request-naming">Pull Request Naming</h3>
+<p><em>Pull Request Title</em></p>
+<p>The Pull Request title should be named using the following format:</p>
+<p><code>#[STORY_ID] [Story description]</code></p>
+<p><code>Example</code></p>
+<p><code>#TB1-I764 CREATE PULL REQUEST TEMPLATE</code></p>
+<p><em>Pull Request Description Template</em></p>
+<p>The description of the Pull Request should contain the following headings and corresponding content in Markdown format.</p>
+<pre><code>#### What does this Pull Request do?
+#### Description of Task to be completed?
+#### How should this be manually tested?
+#### Any background context you want to provide?
+#### What are the relevant open projects stories e.g Asana?
+#### Screenshots (if appropriate)
+#### Questions:</code></pre>
+<p><em>Pull Request Etiquette</em></p>
+<p>It is our belief that Pull Request reviews should not negatively impact a team’s ability to deliver features. Pull Requests that take too much time to get reviewed can hinder on a team’s progress. As such, we practice the following behaviours when raising Pull Requests:</p>
+<pre><code>When I raise a Pull Request, I specifically assign a developer or engineering team as reviewer
+When I raise a Pull Request, I notify the reviewer(s) on telegram in a public channel
+The reviewer(s) can re-assign the Pull Request to someone else (e.g. to a Senior Engineer)
+The reviewer(s) has a 3 hours SLA to review the Pull Request
+If SLA is not met, I can Pull the unreviewed Pull Request if and only if:
+    All the Pull Request checks are passing (CircleCI, CodeClimate, Test Coverage)
+    I communicate in #technology telegram channel that I am merging an unreviewed Pull Request
+    I immediately take ownership of fixing any issues that arise from merging the Pull Request</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
