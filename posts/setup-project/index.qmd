@@ -5,11 +5,10 @@ date: "2022-12-01"
 categories: [programming,engineering]
 ---
 
-
+![](best.png)
 
 Set up projects for development and production environments
 
-Set up projects Create and deploy experiments
 This topic describes how to:
 
 Use separate projects to create development and production environments Many organizations have separate development and production environments so they can build and test new features without disturbing production traffic. In Optimizely, you can create separate projects for each environment to help with governance.

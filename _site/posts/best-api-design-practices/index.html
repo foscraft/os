@@ -9,7 +9,7 @@
 <meta name="author" content="foscraft">
 <meta name="dcterms.date" content="2022-12-01">
 
-<title>foscraft - Set up projects for development and production environments</title>
+<title>foscraft - API Design best practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,8 +100,10 @@ ul.task-list{list-style: none;}
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Set up projects for development and production environments</h1>
+      <h1 class="title">API Design best practices</h1>
                                 <div class="quarto-categories">
+                <div class="quarto-category">APIs</div>
+                <div class="quarto-category">tech</div>
                 <div class="quarto-category">programming</div>
                 <div class="quarto-category">engineering</div>
               </div>
@@ -138,26 +140,27 @@ ul.task-list{list-style: none;}
 
 
 
-<p><img src="best.png" class="img-fluid"></p>
-<p>Set up projects for development and production environments</p>
-<p>This topic describes how to:</p>
-<p>Use separate projects to create development and production environments Many organizations have separate development and production environments so they can build and test new features without disturbing production traffic. In Optimizely, you can create separate projects for each environment to help with governance.</p>
-<p>With separate development and production projects, your organization can safely build and QA experiments and Personalization campaigns in a development environment before deploying to production. This approach allows multiple stakeholders in your organization to act as gatekeepers for running new experiments in production.</p>
-<p>This article describes how to set up projects for two separate environments and deploy experiments in that setup.</p>
-<p>Set up projects First, you’ll start by creating two new projects: one for development and one for production.</p>
-<p>Each project will need its own snippet:</p>
-<p><code>Create a project for your development environment.</code></p>
-<p><code>Implement the snippet in the head tag for that environment.</code></p>
-<p><code>Add the collaborators who you'd like to have access to your development project.</code></p>
-<p><code>Next, create a project for your production environment.</code></p>
-<p><code>Implement the production project snippet in the head tag of the production environment.</code></p>
-<p><code>Add collaborators who you'd like to have access to your production project.</code></p>
-<p>If you’re using Optimizely, prepare each project by creating all pages, events, and audiences in each project. If you have an Optimizely Web Scale package, you can create events that are available across projects, which saves you time and makes it easier to keep events synchronized across your environments.</p>
-<p>Create and deploy experiments Once you’ve set up your development and production projects, use them to create, test, and deploy experiments. Here’s how:</p>
-<p>Create an experiment in your development environment. If your development URLs are the same as the URLs used for your production environment, make sure that your production environment does not use the snippet from your development project.</p>
-<p>Build and QA your new development experiment to make sure that everything works the way you’d like.</p>
-<p>Build the experiment for your production project.</p>
-<p>When you’re ready, start the experiment in your production project!</p>
+<p><img src="best.jpg" class="img-fluid"></p>
+<p>API Design best practices.</p>
+<p><code>Allow pagination and filtering</code></p>
+<p>Some endpoints may return substantial amounts of data that slow down a system.</p>
+<p>Pagination and filtering avoid this by returning only a certain number of results at a time. This improves performance and reduces the usage of server resources.</p>
+<p><code>Versioning</code></p>
+<p>If you’re making changes to your API that could potentially break it and the client apps that use it, it’s crucial to version it to have previous versions as a backup. This also lets you phase out old endpoints and introduce updated ones with new features.</p>
+<p><code>Use JSON</code></p>
+<p>JSON is the standard for transferring data. JavaScript has built-in methods to parse JSON quickly, and it is supported in almost all programming languages. For simplicity, APIs should accept JSON payloads, and endpoints should return JSON as a response.</p>
+<p><code>Use nouns for endpoint paths</code></p>
+<p>Endpoint paths should always be named in reference to the entity they represent, for example, ‘articles,’ ‘users,’ ‘posts.’</p>
+<p>Endpoints paths should never be verbs because the HTTP request is our verb, e.g., GET, DELETE, PUT, etc.</p>
+<p><code>Maintain good security practices</code></p>
+<p>As with any client-server communication, SSL/TLS security is a must if data is to be kept encrypted and safe. Without it, data is at risk of being exposed.</p>
+<p><code>Use caching</code></p>
+<p>Using Cache-Control headers will allow users to make effective use of cached data.</p>
+<p>Caching allows users to access data faster because it is stored locally, meaning another request to the server to retrieve it is not needed.</p>
+<p><code>Implement timeouts</code></p>
+<p>Timeouts cause a request to fail after a specified amount of time.</p>
+<p>This is useful when there is a network issue, and the request cannot be completed, or a user sends too much data.</p>
+<p>This connection is closed instead of remaining open.</p>
 
 
 
